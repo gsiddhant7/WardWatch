@@ -12,16 +12,34 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// CORS configuration
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests without an Origin header (e.g. curl)
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+  })
+);
+
 app.use(express.json());
 
-// Authentication routes
+// API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRoutes);
 app.use("/api/complaints", complaintRoutes);
 app.use("/api/users", userRoutes);
-// Test route
+
+// API welcome route
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
@@ -36,7 +54,7 @@ const startServer = async () => {
 
     const PORT = process.env.PORT || 5001;
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`WardWatch server running on port ${PORT}`);
     });
   } catch (error) {
