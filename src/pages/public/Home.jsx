@@ -36,17 +36,20 @@ const steps = [
   {
     number: "01",
     title: "Report an Issue",
-    description: "Submit your complaint with details, location and an optional photo.",
+    description:
+      "Submit your complaint with details, location and an optional photo.",
   },
   {
     number: "02",
     title: "Track Progress",
-    description: "Follow your complaint as the ward office reviews and processes it.",
+    description:
+      "Follow your complaint as the ward office reviews and processes it.",
   },
   {
     number: "03",
     title: "See the Resolution",
-    description: "Stay informed when action is taken and your issue is resolved.",
+    description:
+      "Stay informed when action is taken and your issue is resolved.",
   },
 ];
 
@@ -118,6 +121,74 @@ function Home() {
               <p>{category.description}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* About the Project and Acknowledgements */}
+      <section className="acknowledgements-section">
+        <div className="acknowledgements-container">
+          <div className="acknowledgements-heading">
+            <span className="section-label">BEHIND WARDWATCH</span>
+            <h2>Built through learning and collaboration.</h2>
+            <p>
+              WardWatch is an academic project developed to explore
+              how web technology can improve public grievance
+              reporting and local-level service management.
+            </p>
+            <p>
+              The project was designed and implemented by
+              <strong> Siddhant Ghimire</strong>, with support from
+              educational materials, technical documentation,
+              online tutorials, developer communities and
+              AI-assisted tools.
+            </p>
+          </div>
+
+          <div className="acknowledgements-grid">
+            <div className="acknowledgement-card">
+              <span>📚</span>
+              <h3>Books & Learning Materials</h3>
+              <p>
+                Academic books, study materials and learning
+                resources that helped build the foundation.
+              </p>
+            </div>
+
+            <div className="acknowledgement-card">
+              <span>🌐</span>
+              <h3>Online Resources</h3>
+              <p>
+                Technical documentation, tutorials and
+                developer communities that supported implementation.
+              </p>
+            </div>
+
+            <div className="acknowledgement-card">
+              <span>🤖</span>
+              <h3>AI-Assisted Learning</h3>
+              <p>
+                ChatGPT and other AI tools that assisted with
+                learning, problem-solving and development guidance.
+              </p>
+            </div>
+          </div>
+
+          <div className="creator-credit">
+            <div>
+              <span className="creator-label">PROJECT DEVELOPER</span>
+              <h3>Siddhant Ghimire</h3>
+              <p>Thank you to everyone and every resource that helped make this project possible.</p>
+            </div>
+
+            <a
+              href="https://siddhantghimire62.com.np"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="creator-link"
+            >
+              Visit my website ↗
+            </a>
+          </div>
         </div>
       </section>
     </div>
