@@ -19,14 +19,15 @@ function Navbar() {
           <span>WardWatch</span>
         </Link>
 
-        <nav className="navbar-links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/complaints">Community Feed</NavLink>
+       <nav className="navbar-links">
+  <NavLink to="/">Home</NavLink>
+  <NavLink to="/complaints">Community Feed</NavLink>
+  <NavLink to="/#about-creator">About Creator</NavLink>
 
-          {user?.role === "Citizen" && (
-            <NavLink to="/dashboard">Dashboard</NavLink>
-          )}
-        </nav>
+  {user?.role === "Citizen" && (
+    <NavLink to="/dashboard">Dashboard</NavLink>
+  )}
+</nav>
 
         <div className="navbar-actions">
           {user ? (

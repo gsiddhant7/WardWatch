@@ -2867,3 +2867,11 @@ a {
     flex-direction: column;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about-creator {
+  scroll-margin-top: 90px;
+}

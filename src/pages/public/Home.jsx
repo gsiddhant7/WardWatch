@@ -125,8 +125,10 @@ function Home() {
       </section>
 
       {/* About the Project and Acknowledgements */}
-      <section className="acknowledgements-section">
-        <div className="acknowledgements-container">
+<section
+  id="about-creator"
+  className="acknowledgements-section"
+>        <div className="acknowledgements-container">
           <div className="acknowledgements-heading">
             <span className="section-label">BEHIND WARDWATCH</span>
             <h2>Built through learning and collaboration.</h2>
