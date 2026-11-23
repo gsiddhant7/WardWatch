@@ -22,8 +22,7 @@ function Navbar() {
        <nav className="navbar-links">
   <NavLink to="/">Home</NavLink>
   <NavLink to="/complaints">Community Feed</NavLink>
-  <NavLink to="/#about-creator">About Creator</NavLink>
-
+<a href="/#about-creator">About Creator</a>
   {user?.role === "Citizen" && (
     <NavLink to="/dashboard">Dashboard</NavLink>
   )}
