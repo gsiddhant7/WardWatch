@@ -2875,3 +2875,27 @@ html {
 #about-creator {
   scroll-margin-top: 90px;
 }
+
+.navbar-links a,
+.navbar-links .about-nav-button {
+  color: #596579;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-links a.active {
+  color: #2563eb;
+}
+
+.navbar-links .about-nav-button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navbar-links .about-nav-button:hover,
+.navbar-links a:hover {
+  color: #2563eb;
+}
